@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
   res.send("test");
 });
 
+//! POST
 app.post("/api/create", (req, res) => {
   const userName = req.body.userName;
   const title = req.body.title;

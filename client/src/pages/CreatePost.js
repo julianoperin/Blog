@@ -14,6 +14,11 @@ const CreatePost = () => {
       text,
       date,
     });
+
+    // setUsername("");
+    // setTitle("");
+    // setText("");
+    // setDate("");
   };
 
   return (
