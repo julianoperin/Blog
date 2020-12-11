@@ -6,9 +6,18 @@ const app = express();
 
 const PORT = 3001;
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) => {});
+
+app.post("/create", (req, res) => {
   db.query(
-    "INSERT INTO posts(title, post_text, user_name) VALUES ('Promised Land','It was a great book', 'Juliano Perin')"
+    "INSERT INTO POSTS (title, post_text, user_name) VALUES ()",
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+
+      console.log(results);
+    }
   );
 });
 
