@@ -1,11 +1,15 @@
 const express = require("express");
 
+const db = require("./config/db");
+
 const app = express();
 
 const PORT = 3001;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  db.query(
+    "INSERT INTO posts(title, post_text, user_name) VALUES ('Promised Land','It was a great book', 'Juliano Perin')"
+  );
 });
 
 app.listen(PORT, () => {
