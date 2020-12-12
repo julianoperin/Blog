@@ -16,6 +16,12 @@ const MainPage = () => {
     });
   }, []);
 
+  const likePost = (id) => {
+    axios.post(`http://localhost:3001/api/like${id}`).then((response) => {
+      console.log("You liked the post!");
+    });
+  };
+
   return (
     <div className="main-page">
       <div className="post-container">
@@ -40,6 +46,11 @@ const MainPage = () => {
                   ? post.date_posted
                   : "The Date is not Available"}
               </span>
+              <input className="input-update" type="text" />
+              <div className="btns">
+                <button>Update</button>
+                <button>Delete</button>
+              </div>
             </div>
           );
         })}

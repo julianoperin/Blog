@@ -15,10 +15,10 @@ const CreatePost = () => {
       date,
     });
 
-    setUsername("");
-    setTitle("");
-    setText("");
-    setDate("");
+    // setUsername("");
+    // setTitle("");
+    // setText("");
+    // setDate("");
   };
 
   return (
